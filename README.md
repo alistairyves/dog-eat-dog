@@ -1,3 +1,4 @@
 # dog-eat-dog
 
-vidmail rails
+Keep track of chess league at work
+
