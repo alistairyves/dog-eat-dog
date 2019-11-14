@@ -3,7 +3,7 @@ import React from "react";
 const Score = ({ user }) => {
   return (
     <div>
-      <span>{user.firstName + " " + user.lastName}</span>
+      <span class="badge">{user.firstName + " " + user.lastName}</span>
     </div>
   );
 };
