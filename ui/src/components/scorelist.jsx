@@ -9,17 +9,15 @@ class ScoreList extends Component {
       users: []
     };
   }
-  //   state = {
-  //     scores: ["Hello", "Goodbye", "see You later"]
-  //   };
+
+  fetchUsers() {}
   componentDidMount() {
     //todo get this part figured out
     fetch("http://localhost:4000/users")
-      .then(results => {
-        return results.json;
-      })
+      .then(results => results.json())
       .then(data => {
-        let users = data.results.map(user => {
+        console.log(data);
+        let users = data.map(user => {
           return user;
         });
         this.setState({ users: users });
@@ -29,7 +27,7 @@ class ScoreList extends Component {
     return (
       <div>
         {this.state.users.map(user => (
-          <Score value={user.value} />
+          <Score value={user.firstName + " " + user.lastName} key={user.id} />
         ))}
       </div>
     );
