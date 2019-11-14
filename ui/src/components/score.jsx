@@ -1,14 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Score extends Component {
-  state = {};
-  render() {
-    return (
-      <div>
-        <span>{this.props.value}</span>
-      </div>
-    );
-  }
-}
+const Score = ({ user }) => {
+  return (
+    <div>
+      <span>{user.firstName + " " + user.lastName}</span>
+    </div>
+  );
+};
 
 export default Score;

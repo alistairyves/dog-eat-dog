@@ -27,7 +27,7 @@ class ScoreList extends Component {
     return (
       <div>
         {this.state.users.map(user => (
-          <Score value={user.firstName + " " + user.lastName} key={user.id} />
+          <Score user={user} key={user.id} />
         ))}
       </div>
     );
